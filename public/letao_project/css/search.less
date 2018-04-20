@@ -1,0 +1,141 @@
+.lt_header {
+    .go_back {
+        position: absolute;
+        top: 6px;
+        left: 5px;
+    }
+}
+
+.sub_wrap {
+    padding: 5px;
+    background-color: #fff;
+}
+
+.search_form {
+    form {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        input {
+            margin-bottom: 0;
+            height: 30px;
+            border: 1px inset #006699;
+            font-size: 12px;
+        }
+        button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            background-color: #006699;
+            color: #fff;
+            border-radius: 0;
+        }
+    }
+}
+
+.search_title {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+    .s_his {}
+    .s_clear {
+        >.mui-icon-trash {
+            font-size: 16px;
+        }
+    }
+}
+
+.search_item {
+    font-size: 12px;
+    padding: 5px;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            a {
+                display: block;
+                padding: 5px ;
+                border: 1px solid #ccc;
+                border-top: none;
+                position: relative;
+                >.close_key{
+                  position: absolute;
+                  right: 2px;
+                  top: 4px;
+                  color: #666;
+                  font-weight: 800;
+                }
+            }
+        }
+        li:first-child {
+            a {
+                border-top: 1px solid #ccc;
+            }
+        }
+    }
+}
+
+.lt_order_bar{
+    display: none;
+    a{
+        padding: 5px 0;
+        float: left;
+        width: 25%;
+        position: relative;
+        text-align: center;
+        font-size: 12px;
+        background-color: #efeff4;
+        .mui-icon{
+            position: absolute;
+            top: 9px;
+            right: 3px;
+            font-size: 12px;
+        }
+        .mui-icon-arrowdown{
+            display: none;
+        }
+    }
+    .active{
+        color: orange;
+    }
+    a:focus{
+        color: orange;
+    }
+}
+
+.lt_product {
+    .product_item {
+        float: left;
+        width: 50%;
+        text-align: center;
+        background-color: #fff;
+        padding: 2px;
+        >div{
+            border: 1px solid #ccc;
+            
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+        .pro_info {
+            color: #0094ff;
+            padding: 0 10px;
+            height: 36px;
+            line-height: 18px;
+            overflow: hidden;
+        }
+        .pro_price {
+            font-size: 12px;
+            .new_price {
+                color: red;
+            }
+            .old_price {
+                color: #ccc;
+            }
+        }
+        .pro_buy {}
+    }
+}

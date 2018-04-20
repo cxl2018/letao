@@ -1,0 +1,33 @@
+.lt_nav {
+  padding: 10px;
+}
+.lt_nav a {
+  float: left;
+  width: 33.33%;
+}
+.lt_nav a img {
+  width: 100%;
+}
+.lt_product .product_item {
+  float: left;
+  width: 50%;
+  text-align: center;
+  padding: 5px;
+  background-color: #fff;
+}
+.lt_product .product_item img {
+  width: 100%;
+  display: block;
+}
+.lt_product .product_item .pro_info {
+  color: #0094ff;
+}
+.lt_product .product_item .pro_price {
+  font-size: 12px;
+}
+.lt_product .product_item .pro_price .new_price {
+  color: red;
+}
+.lt_product .product_item .pro_price .old_price {
+  color: #ccc;
+}

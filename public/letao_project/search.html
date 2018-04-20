@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>乐淘首页</title>
+  <link rel="stylesheet" href="./assets/fa/css/font-awesome.css">
+  <link rel="stylesheet" href="./assets/mui/css/mui.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/search.css">
+</head>
+
+<body>
+  <div class="lt_view">
+    <header class="lt_header">
+      <h4>搜索中心
+        <a href="javascrpt:history.back()" class="go_back">
+          <span class="mui-icon mui-icon-arrowleft"></span>
+        </a>
+      </h4>
+    </header>
+    <div class="lt_container">
+      <div class="lt_wrapper">
+        <div class="mui-scroll-wrapper">
+          <div class="mui-scroll">
+            <div class="sub_wrap">
+              <div class="search_form">
+                <!-- 搜索表单 -->
+                <form action="">
+                  <input id="search_txt" type="text" placeholder="搜索你喜欢的商品">
+                  <button type="button" id="search_btn">搜索</button>
+                </form>
+              </div>
+              <!-- 搜索历史 -->
+              <div class="search_history">
+                <!-- 标题 -->
+                <div class="search_title mui-clearfix">
+                  <a href="javascript:;" class="mui-pull-left s_his">搜索历史</a>
+                  <a href="javascript:;" class="mui-pull-right s_clear">
+                    <span class="mui-icon mui-icon-trash"></span>清空记录</a>
+                </div>
+                <!-- 内容 -->
+                <div class="search_item">
+                  <ul>
+                    <!-- <li> <a href="javascript:;">手机 <span class="mui-icon mui-icon-closeempty close_key"></span> </a> </li> -->
+                  </ul>
+                </div>
+              </div>
+
+              <!-- 排序工具栏 -->
+              <div class="lt_order_bar mui-clearfix">
+                <a href="javascript:;" class="sell_time">
+                  <span class="ob_font">上架时间</span>
+                  <span class="mui-icon mui-icon-arrowup"></span>
+                  <span class="mui-icon mui-icon-arrowdown"></span>
+                </a>
+                <a href="javascript:;" class="ob_price">
+                  <span class="ob_font">价格</span>
+                  <span class="mui-icon mui-icon-arrowup"></span>
+                  <span class="mui-icon mui-icon-arrowdown"></span>
+                </a>
+                <a href="javascript:;" class="ob_nums">
+                  <span class="ob_font">销量</span>
+                  <span class="mui-icon mui-icon-arrowup"></span>
+                  <span class="mui-icon mui-icon-arrowdown"></span>
+                </a>
+                <a href="javascript:;" class="ob_percent">
+                  <span class="ob_font">折扣</span>
+                  <span class="mui-icon mui-icon-arrowup"></span>
+                  <span class="mui-icon mui-icon-arrowdown"></span>
+                </a>
+              </div>
+              <div class="lt_product">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="lt_footer">
+      <a href="index.html">
+        <i class="fa fa-home"></i> 首页 </a>
+      <a class="active" href="javascript:;">
+        <i class="fa fa-bars"></i> 分类 </a>
+      <a href="javascript:;">
+        <i class="fa fa-shopping-cart"></i> 购物车 </a>
+      <a href="javascript:;">
+        <i class="fa fa-user"></i> 会员中心 </a>
+    </footer>
+  </div>
+</body>
+
+<script type="text/html" id="productTpl">
+  {{each data as value }}
+  <a data-id="{{value.id}}" class="product_item clearfix" href="javascript:;">
+    <div>
+      <img src="{{value.pic[0].picAddr}}" alt="">
+      <p class="pro_info">{{value.proName}}</p>
+      <p class="pro_price"><span class="new_price">{{value.price}}</span><del class="old_price">{{value.oldProce}}</del>  </p>
+      <p class="pro_buy "><button class="mui-btn mui-btn-primary">立即购买</button></p>
+    </div>
+    </a>
+    {{/each}}
+    
+    <a href="javascript:;">点击加载更多....</a>
+</script>
+
+
+<script src="./assets/mui/js/mui.js"></script>
+<script src="./assets/zepto/zepto.min.js"></script>
+<script src="./assets/artTemplate/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/search.js"></script>
+
+</html>
